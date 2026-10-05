@@ -1,33 +1,883 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mon parcours — Julie Prévost, L'atelier de la rebouteuse</title><meta name="description" content="Infirmière depuis plus de 20 ans (urgences, chirurgie, soins généraux, rééducation), formée au reboutement, à la méthode Niromathé, à la TMC, aux soins énergétiques et au Reiki.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>:root{--bg:#f3efe6;--ink:#1f2a22;--soft:#4d5a50;--card:#fffdf8;--line:#d9d3c3;--green:#2f3f31;--clay:#b8643f;--on:#f3efe6}
-@media (prefers-color-scheme:dark){:root{--bg:#1a221c;--ink:#ece8dc;--soft:#b3bcb2;--card:#232d25;--line:#38453a;--clay:#d98a64}}
-*,*:before,*:after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 "DM Sans",system-ui,sans-serif}
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1;margin:0 0 .5em}
-a{color:inherit}
-.wrap{max-width:720px;margin:0 auto;padding:0 22px}
-nav{background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-nav .wrap{display:flex;gap:18px;overflow-x:auto;white-space:nowrap;padding-top:12px;padding-bottom:12px;align-items:center}
-nav a{text-decoration:none;font-size:15px;font-weight:500}
-nav .brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;margin-right:auto}
-.hero{background:radial-gradient(120% 80% at 70% 0,#4a5a47,var(--green) 60%,#1d2820);color:var(--on);text-align:center;padding:60px 0 52px}
-.hero h1{font-size:clamp(40px,11vw,64px)}
-.hero em{color:#e49a74}
-.hero p{color:#d8dcd2;max-width:30em;margin:0 auto 26px}
-.btn{display:inline-block;background:var(--on);color:#1f2a22;padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:500}
-section{padding:48px 0;border-bottom:1px solid var(--line)}
-h2{font-size:clamp(32px,9vw,44px)}
-h3{font-size:25px;margin-top:1.3em}
-.lead{font-family:"Cormorant Garamond",Georgia,serif;font-size:23px;line-height:1.4;color:var(--soft)}
-ul{padding-left:20px}
-li{margin-bottom:.3em}
-.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:20px;font-size:15.5px;color:var(--soft)}
-.cards{display:grid;gap:14px}
-.cards a{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;text-decoration:none}
-.cards b{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;font-weight:500;display:block}
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mon parcours | L’Atelier de la rebouteuse – Julie Prévost</title>
+
+  <meta name="description" content="Découvrez le parcours de Julie Prévost, infirmière depuis plus de 20 ans, et son approche autour du reboutement, de la TMC, du Reiki, de l'énergétique et du mouvement.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --bg:#f8f7f2;
+      --card:#ffffff;
+      --text:#273028;
+      --soft:#667066;
+      --green:#4a5a47;
+      --green-dark:#263329;
+      --clay:#c98263;
+      --line:#dedfd8;
+      --tint:#e9e2d0;
+      --on:#ffffff;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Inter",Arial,sans-serif;
+      line-height:1.7;
+    }
+
+    .wrap{
+      width:min(1080px,92%);
+      margin:0 auto;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(248,247,242,.96);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+
+    nav .wrap{
+      display:flex;
+      gap:18px;
+      overflow-x:auto;
+      white-space:nowrap;
+      padding-top:12px;
+      padding-bottom:12px;
+      align-items:center;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--text);
+      font-size:15px;
+      font-weight:500;
+    }
+
+    nav a:hover{
+      color:var(--clay);
+    }
+
+    nav .brand{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:22px;
+      margin-right:auto;
+      color:var(--green-dark);
+    }
+
+    .hero{
+      background:
+        radial-gradient(
+          120% 80% at 70% 0,
+          #4a5a47,
+          var(--green) 60%,
+          #1d2820
+        );
+      color:var(--on);
+      text-align:center;
+      padding:70px 0 60px;
+    }
+
+    .hero h1{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-weight:500;
+      font-size:clamp(42px,11vw,66px);
+      line-height:1.05;
+      margin:0 0 15px;
+    }
+
+    .hero h1 em{
+      color:#e49a74;
+      font-style:normal;
+    }
+
+    .hero p{
+      color:#d8dcd2;
+      max-width:650px;
+      margin:0 auto;
+      font-size:17px;
+    }
+
+    section{
+      padding:55px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    section.t{
+      background:var(--tint);
+    }
+
+    h2{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-weight:500;
+      font-size:clamp(34px,9vw,48px);
+      line-height:1.15;
+      margin:0 0 20px;
+      color:var(--green-dark);
+    }
+
+    h3{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:29px;
+      font-weight:500;
+      margin-top:1.3em;
+      margin-bottom:.5em;
+      color:var(--green-dark);
+    }
+
+    p{
+      max-width:780px;
+    }
+
+    .lead{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:24px;
+      line-height:1.45;
+      color:var(--soft);
+      max-width:760px;
+    }
+
+    .intro{
+      font-size:17px;
+    }
+
+    .box{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-left:4px solid var(--clay);
+      border-radius:16px;
+      padding:22px 24px;
+      margin-top:25px;
+      color:var(--soft);
+    }
+
+    .box strong{
+      color:var(--green-dark);
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .timeline-item{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:22px 24px;
+    }
+
+    .timeline-item strong{
+      display:block;
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:28px;
+      font-weight:500;
+      color:var(--green-dark);
+      margin-bottom:7px;
+    }
+
+    .timeline-item p{
+      margin:0;
+      color:var(--soft);
+    }
+
+    .values{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .value{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:20px;
+    }
+
+    .value strong{
+      display:block;
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:25px;
+      font-weight:500;
+      margin-bottom:6px;
+      color:var(--green-dark);
+    }
+
+    .value span{
+      color:var(--soft);
+      font-size:15px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:var(--green);
+      color:var(--on);
+      padding:15px 24px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:500;
+      transition:.2s ease;
+    }
+
+    .btn:hover{
+      background:var(--green-dark);
+      transform:translateY(-1px);
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--green);
+      border:1.5px solid var(--green);
+    }
+
+    .btn.secondary:hover{
+      background:var(--green);
+      color:white;
+    }
+
+    .yoga-box{
+      background:
+        linear-gradient(
+          135deg,
+          #eef1e9,
+          #f8f7f2
+        );
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:30px;
+      margin-top:25px;
+    }
+
+    .yoga-box h3{
+      margin-top:0;
+    }
+
+    footer{
+      padding:38px 0 60px;
+      color:var(--soft);
+      font-size:14px;
+      text-align:center;
+    }
+
+    footer a{
+      color:var(--green);
+    }
+
+    a:focus-visible{
+      outline:3px solid var(--clay);
+      outline-offset:3px;
+    }
+
+    @media(max-width:650px){
+
+      nav .wrap{
+        gap:14px;
+      }
+
+      nav a{
+        font-size:14px;
+      }
+
+      .hero{
+        padding:55px 0 48px;
+      }
+
+      section{
+        padding:42px 0;
+      }
+
+      .lead{
+        font-size:22px;
+      }
+
+      .buttons{
+        flex-direction:column;
+      }
+
+      .btn{
+        text-align:center;
+        width:100%;
+      }
+
+      .yoga-box{
+        padding:23px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="wrap">
+
+      <a class="brand" href="index.html">
+        L’Atelier de la rebouteuse
+      </a>
+
+      <a href="index.html">Accueil</a>
+
+      <a href="tmc.html">TMC</a>
+
+      <a href="soins-energetiques.html">
+        Soins énergétiques
+      </a>
+
+      <a href="reiki.html">
+        Reiki
+      </a>
+
+      <a href="reboutement.html">
+        Reboutement
+      </a>
+
+      <a href="programmes.html">
+        Programmes
+      </a>
+
+      <a href="parcours.html">
+        Mon parcours
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="wrap">
+
+      <h1>
+        Mon <em>parcours</em>
+      </h1>
+
+      <p>
+        De l’expérience du soin à une approche globale du corps,
+        du mouvement et du bien-être.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- INTRODUCTION -->
+
+  <section>
+
+    <div class="wrap">
+
+      <h2>
+        Une histoire avant tout humaine
+      </h2>
+
+      <p class="lead">
+        Je suis Julie Prévost, infirmière depuis plus de 20 ans,
+        avec une longue expérience dans le domaine des soins et
+        notamment auprès de personnes confrontées à des situations
+        parfois complexes.
+      </p>
+
+      <p class="intro">
+        Au fil des années, mon expérience professionnelle m'a appris
+        l'importance de l'écoute, de l'observation, du contact humain
+        et de la prise en compte de chaque personne dans sa globalité.
+      </p>
+
+      <p class="intro">
+        Mais mon propre parcours m'a également amenée à m'interroger
+        autrement sur le corps, ses ressentis, ses tensions et les
+        différentes façons de l'accompagner.
+      </p>
+
+      <div class="box">
+
+        <strong>
+          Aujourd'hui, je ne sépare pas l'humain du corps.
+        </strong>
+
+        <br><br>
+
+        J'aime comprendre la personne dans son ensemble, écouter ce
+        qu'elle exprime mais aussi ce que son corps peut venir raconter,
+        toujours dans une démarche d'écoute et de bien-être.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EVOLUTION -->
+
+  <section class="t">
+
+    <div class="wrap">
+
+      <h2>
+        Une évolution naturelle
+      </h2>
+
+      <p class="lead">
+        Mon parcours ne s'est pas construit en opposition à mon métier
+        d'infirmière, mais plutôt dans la continuité de mon envie
+        d'accompagner autrement.
+      </p>
+
+      <p>
+        Reboutement, magnétisme, énergétique, Reiki et TMC sont ainsi
+        venus compléter mon expérience, tout comme mes activités autour
+        du mouvement et de la prévention : yoga, méditation, Pilates
+        et pole dance.
+      </p>
+
+      <p>
+        Ces différentes approches ont chacune leur place et répondent
+        à des besoins différents. Elles me permettent aujourd'hui
+        de proposer un accompagnement personnalisé, en fonction de
+        la personne, de ses attentes et de son ressenti.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PARCOURS -->
+
+  <section>
+
+    <div class="wrap">
+
+      <h2>
+        Les différentes étapes de mon parcours
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <strong>
+            Plus de 20 ans dans les soins
+          </strong>
+
+          <p>
+            Mon expérience d'infirmière m'a permis de développer une
+            écoute attentive, une observation fine et une véritable
+            connaissance du corps humain et des réalités rencontrées
+            dans le monde du soin.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Le reboutement
+          </strong>
+
+          <p>
+            Une approche manuelle qui s'est progressivement intégrée
+            à mon parcours, avec l'envie de travailler autrement autour
+            du corps, des tensions et des ressentis corporels.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            L'énergétique et le Reiki
+          </strong>
+
+          <p>
+            Ces pratiques m'ont permis d'explorer une autre dimension
+            de l'accompagnement, davantage centrée sur les ressentis,
+            la détente et l'équilibre global.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            La TMC
+          </strong>
+
+          <p>
+            La Technique Manuelle Cognitive est venue enrichir ma
+            pratique avec une approche qui associe travail manuel,
+            écoute du corps et recherche des éléments pouvant être
+            associés aux difficultés ressenties par la personne.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Le mouvement et la prévention
+          </strong>
+
+          <p>
+            Le yoga, la méditation, le Pilates et la pole dance occupent
+            également une place importante dans mon parcours.
+            Ils me permettent de transmettre une autre manière de
+            prendre soin de son corps : bouger, renforcer, mobiliser,
+            respirer, ressentir et reprendre confiance dans ses
+            capacités corporelles.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APPROCHE CORPORELLE -->
+
+  <section class="t">
+
+    <div class="wrap">
+
+      <h2>
+        Une approche corporelle complète
+      </h2>
+
+      <p class="lead">
+        Prendre soin de soi, ce n'est pas seulement agir lorsque
+        le corps ou les émotions nous alertent.
+      </p>
+
+      <p>
+        C'est aussi apprendre à mieux connaître son corps, à l'entretenir,
+        à le mettre en mouvement et à préserver ses capacités dans le
+        temps.
+      </p>
+
+      <p>
+        C'est dans cette démarche de prévention que mes activités autour
+        du mouvement occupent une place importante dans mon parcours.
+      </p>
+
+      <div class="yoga-box">
+
+        <h3>
+          Yoga, Pilates, méditation &amp; pole dance
+        </h3>
+
+        <p>
+          À travers ces différentes pratiques, j'accompagne les personnes
+          dans une approche corporelle qui associe mouvement, mobilité,
+          force, souplesse, respiration, conscience du corps et plaisir
+          de bouger.
+        </p>
+
+        <p>
+          L'objectif n'est pas de rechercher la performance à tout prix,
+          mais de mieux comprendre son corps, ses possibilités et ses
+          limites, tout en développant progressivement ses capacités.
+        </p>
+
+        <p>
+          Cette approche du mouvement vient naturellement compléter
+          mon travail autour du bien-être et de l'accompagnement.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            class="btn"
+            href="https://www.yognmoov.fr"
+            target="_blank"
+            rel="noopener noreferrer">
+            Découvrir Yog’n Moov
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VALEURS -->
+
+  <section>
+
+    <div class="wrap">
+
+      <h2>
+        Ce qui guide ma pratique
+      </h2>
+
+      <p class="lead">
+        Chaque personne est différente. Il n'y a donc pas une seule
+        façon de prendre soin de soi.
+      </p>
+
+      <div class="values">
+
+        <div class="value">
+
+          <strong>
+            Écouter
+          </strong>
+
+          <span>
+            Prendre le temps d'entendre ce que vous vivez et ce que
+            vous ressentez.
+          </span>
+
+        </div>
+
+
+        <div class="value">
+
+          <strong>
+            Observer
+          </strong>
+
+          <span>
+            Porter attention au corps, à ses réactions et à ses
+            ressentis.
+          </span>
+
+        </div>
+
+
+        <div class="value">
+
+          <strong>
+            Individualiser
+          </strong>
+
+          <span>
+            Adapter l'accompagnement à chaque personne et à son
+            histoire.
+          </span>
+
+        </div>
+
+
+        <div class="value">
+
+          <strong>
+            Transmettre
+          </strong>
+
+          <span>
+            Donner également des clés pour mieux prendre soin de son
+            corps au quotidien.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- L'ATELIER -->
+
+  <section class="t">
+
+    <div class="wrap">
+
+      <h2>
+        Pourquoi L'Atelier de la rebouteuse ?
+      </h2>
+
+      <p class="lead">
+        Parce que j'avais envie de créer un espace qui me ressemble :
+        humain, simple et bienveillant.
+      </p>
+
+      <p>
+        Un endroit où l'on peut prendre le temps de se poser, d'échanger,
+        d'écouter ses ressentis et de découvrir différentes approches
+        du bien-être.
+      </p>
+
+      <p>
+        Mon parcours d'infirmière reste une partie importante de qui je
+        suis. Mes autres formations et activités sont venues enrichir
+        cette expérience et ouvrir d'autres possibilités
+        d'accompagnement.
+      </p>
+
+      <div class="box">
+
+        <strong>
+          Mon approche aujourd'hui est donc complémentaire :
+        </strong>
+
+        <br><br>
+
+        accompagner lorsque le corps ou les émotions ont besoin
+        d'attention, mais aussi transmettre des outils pour mieux
+        habiter son corps, le mettre en mouvement et prendre soin
+        de soi dans la durée.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section>
+
+    <div class="wrap">
+
+      <h2>
+        Vous souhaitez me rencontrer ?
+      </h2>
+
+      <p class="lead">
+        Je vous accueille à Soulières, à environ 15 minutes d'Épernay,
+        dans un espace dédié à l'écoute et au bien-être.
+      </p>
+
+      <p>
+        Certaines approches peuvent également être proposées
+        à distance, selon leur nature.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn"
+          href="index.html#contact">
+          Me contacter
+        </a>
+
+        <a
+          class="btn secondary"
+          href="https://www.yognmoov.fr"
+          target="_blank"
+          rel="noopener noreferrer">
+          Voir Yog’n Moov
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INFORMATION IMPORTANTE -->
+
+  <section class="t">
+
+    <div class="wrap">
+
+      <div class="box">
+
+        <strong>
+          À propos des pratiques proposées
+        </strong>
+
+        <br><br>
+
+        Les pratiques proposées à L'Atelier de la rebouteuse s'inscrivent
+        dans une démarche de bien-être et d'accompagnement.
+        Elles ne remplacent pas un diagnostic médical, un traitement
+        ou un suivi par un professionnel de santé.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="wrap">
+
+      <p>
+        <strong>L’Atelier de la rebouteuse</strong>
+        · Julie Prévost
+      </p>
+
+      <p>
+        Soulières · Marne
+      </p>
+
+      <p>
+        06 32 51 49 50
+        ·
+        <a href="mailto:julieprevost@laposte.net">
+          julieprevost@laposte.net
+        </a>
+      </p>
+
+      <p>
+        <a
+          href="https://www.yognmoov.fr"
+          target="_blank"
+          rel="noopener noreferrer">
+          Yog’n Moov – Yoga, Pilates, méditation &amp; pole dance
+        </a>
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
