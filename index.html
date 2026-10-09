@@ -30,6 +30,7 @@
     "name": "L’Atelier de la rebouteuse",
     "alternateName": "Julie Prévost",
     "url": "https://julieprevost.github.io/",
+    "image": "https://julieprevost.github.io/salle.jpg",
     "telephone": "+33632514950",
     "description": "Approche bien-être autour du reboutement, de la TMC, du Reiki et des soins énergétiques.",
     "address": {
@@ -321,6 +322,46 @@
       margin-right:auto;
     }
 
+    /* PHOTOS */
+
+    .welcome{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .photo{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:18px;
+      object-fit:cover;
+    }
+
+    .photo-julie{
+      max-width:380px;
+      margin:0 auto;
+      aspect-ratio:4/5;
+    }
+
+    .photo-salle{
+      max-width:820px;
+      margin:30px auto 0;
+      aspect-ratio:3/2;
+    }
+
+    figure{
+      margin:0;
+    }
+
+    figcaption{
+      margin-top:10px;
+      text-align:center;
+      font-size:14px;
+      color:var(--soft);
+    }
+
     footer{
       padding:38px 0 60px;
       color:var(--soft);
@@ -335,6 +376,20 @@
     a:focus-visible{
       outline:3px solid var(--clay);
       outline-offset:3px;
+    }
+
+    @media(min-width:800px){
+
+      .welcome{
+        grid-template-columns:1.4fr 1fr;
+        gap:48px;
+      }
+
+      .photo-julie{
+        margin:0;
+        max-width:none;
+      }
+
     }
 
     @media(max-width:650px){
@@ -445,51 +500,66 @@
 </header>
 
 
-<!-- BIENVENUE -->
+<!-- BIENVENUE (avec la photo de Julie) -->
 
 <section>
 
-  <div class="wrap">
+  <div class="wrap welcome">
 
-    <h2>
-      Bienvenue à L’Atelier de la rebouteuse
-    </h2>
+    <div>
 
-    <p class="lead">
-      Je suis Julie Prévost et je vous accueille à Soulières,
-      dans la Marne, à proximité d’Épernay.
-    </p>
+      <h2>
+        Bienvenue à L’Atelier de la rebouteuse
+      </h2>
 
-    <p>
-      Mon parcours d’infirmière depuis plus de 20 ans m’a appris
-      l’importance de l’écoute, de l’observation et d’un
-      accompagnement humain.
-    </p>
+      <p class="lead">
+        Je suis Julie Prévost et je vous accueille à Soulières,
+        dans la Marne, à proximité d’Épernay.
+      </p>
 
-    <p>
-      Au fil des années, j’ai enrichi mon parcours avec différentes
-      approches autour du corps et du bien-être : reboutement,
-      Technique Manuelle Cognitive (TMC), Reiki et soins énergétiques.
-    </p>
+      <p>
+        Mon parcours d’infirmière depuis plus de 20 ans m’a appris
+        l’importance de l’écoute, de l’observation et d’un
+        accompagnement humain.
+      </p>
 
-    <p>
-      Chaque accompagnement est adapté à la personne, à ses attentes
-      et à ses ressentis.
-    </p>
+      <p>
+        Au fil des années, j’ai enrichi mon parcours avec différentes
+        approches autour du corps et du bien-être : reboutement,
+        Technique Manuelle Cognitive (TMC), Reiki et soins énergétiques.
+      </p>
 
-    <div class="box">
+      <p>
+        Chaque accompagnement est adapté à la personne, à ses attentes
+        et à ses ressentis.
+      </p>
 
-      <strong>
-        Mon intention :
-      </strong>
+      <div class="box">
 
-      <br><br>
+        <strong>
+          Mon intention :
+        </strong>
 
-      vous offrir un espace où vous pouvez prendre le temps de vous
-      écouter, de vous recentrer et d’explorer différentes approches
-      de bien-être.
+        <br><br>
+
+        vous offrir un espace où vous pouvez prendre le temps de vous
+        écouter, de vous recentrer et d’explorer différentes approches
+        de bien-être.
+
+      </div>
 
     </div>
+
+    <figure>
+
+      <img
+        class="photo photo-julie"
+        src="julie.jpg"
+        alt="Julie Prévost, rebouteuse et infirmière à Soulières, près d’Épernay"
+        width="760"
+        height="950">
+
+    </figure>
 
   </div>
 
@@ -697,7 +767,7 @@
 </section>
 
 
-<!-- LOCALISATION -->
+<!-- LOCALISATION (avec la photo de la salle) -->
 
 <section class="t">
 
@@ -711,6 +781,22 @@
       Je vous accueille à Soulières, dans la Marne,
       à environ 15 minutes d’Épernay.
     </p>
+
+    <figure>
+
+      <img
+        class="photo photo-salle"
+        src="salle.jpg"
+        alt="La salle de soins de L’Atelier de la rebouteuse à Soulières"
+        loading="lazy"
+        width="1200"
+        height="800">
+
+      <figcaption>
+        Le cabinet, à Soulières
+      </figcaption>
+
+    </figure>
 
     <div class="local">
 
@@ -998,3 +1084,4 @@ function partagerSite(){
 
 </body>
 </html>
+
